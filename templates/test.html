@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Home</title>
+
+    <!-- Font: Ubuntu -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+
+    <!-- MDE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/test.css" rel="stylesheet">
+    <style>
+        html, body {
+            font-family: 'Ubuntu', sans-serif;
+        }
+        body {
+            background: #f5f5f5;
+            color: #555
+        }
+
+        html, body, main, main .row {
+            height: 100%
+        }
+
+        aside {
+            padding-top: 25px;
+            background: #555;
+            color: #eee
+        }
+
+        aside a {
+            color: white;
+        }
+
+        aside a:hover {
+            color: #eee;
+        }
+
+        .editor {
+            background: white;
+            color: #555;
+            overflow-y:scroll;
+            padding-top: 25px;
+        }
+
+
+        .CodeMirror {
+            border: none;
+            padding:0;
+        }
+
+        .CodeMirror, .CodeMirror-scroll {
+            min-height: 20px;
+        }
+
+        .CodeMirror .editor-preview {
+            background: white;
+            overflow:hidden;
+            padding:0;
+        }
+
+        #cde, .monaco-editor, .monaco-editor > div {
+            overflow:hidden !important;
+        }
+
+        #cde {
+            margin: 0;
+            height:60px;
+        }
+
+        .ace_editor {
+                position: relative;
+                overflow: hidden;
+        }
+
+        .monaco-editor .slider { margin: 0; }
+
+    </style>
+</head>
+
+<body>
+
+<main class="container-fluid">
+    <div class="row">
+        <aside class="col-md-3 col-lg-2 h-100">
+            <nav class="nav flex-column">
+                <h4>Project</h4>
+                <a class="nav-link active" href="#">Active</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </nav>
+        </aside>
+        <div class="editor col-md-6 col-lg-4 h-100">
+            <h3>Page Content</h3>
+            <textarea id="mde">
+
+            </textarea>
+
+<pre id="cde">function foo(items) {
+    var i;
+    for (i = 0; i &lt; items.length; i++) {
+        alert("Ace Rocks " + items[i]);
+    }
+}</pre>
+        </div>
+
+    </div>
+</main>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/assets/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("cde");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+</script>
+
+<script src="/assets/main.js"></script>
+</body>
+</html>
